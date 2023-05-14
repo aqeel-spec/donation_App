@@ -1,27 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"); */
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply bg-backround ;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@layer components {
+  .btn-auth2 {
+    @apply hover:shadow-lg hover:shadow-white hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 w-full bg-gradient-to-r from-[#514756] via-[#473B4C] to-[#382C3E]  px-6 py-2 text-form text-sm text-center transition duration-100 bg-white rounded-md md:text-lg font-serif  font-medium;
+  }
+  .input_section {
+    @apply ring-[0.3px] ring-fuchsia-50 bg-gradient-to-r from-[#514756] via-[#473B4C] to-[#382C3E] w-full p-2 pl-10  placeholder-form rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300
+  }
+  .error_msg {
+    @apply text-sm text-red-500 pl-2 pt-2;
+  }
+  .log_btn {
+    @apply text-center justify-center justify-items-center hover:shadow-lg hover:shadow-white hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 w-full   transition duration-100 hover:bg-[#c5b283]  bg-[#E5B945] px-6 py-1 rounded-full;
+  }
+  .dropDown_box {
+    @apply shadow-lg shadow-cyan-500/50 border-[0.5px] divide-y-2  w-full p-4 items-start rounded-lg absolute top-12 bg-backround
+  }
+  .food_items {
+    @apply h-[220px] w-auto m-auto bg-white rounded-[30px] drop-shadow-xl shadow-[#393939]
+  }
+  .card_food {
+    @apply rounded-[25px] shadow-[#393939] shadow-lg h-[230px] w-[170px] bg-white 
+  }
+  .wrapper {
+    @apply max-w-2xl my-12 mx-auto p-8 bg-gray-100;
+  }
+ .team-profile {
+  @apply text-center px-6 py-4
+ }
+ .team-profile img {
+  @apply w-32 h-32 object-cover rounded-full object-top;
+  } 
+  .container_card {
+    @apply  max-w-none  p-8
+  }
+  .testimonial {
+    min-width: 12.5rem;
+    @apply  m-4 p-7 bg-white rounded-xl;
+  }
+  .item {
+    @apply bg-hamerBurger shadow-lg shadow-[#FF6060] rounded-sm
+  }
+  .item > img {
+    @apply w-full h-48 object-cover rounded-t-lg
+  }
+  .item > div {
+    @apply p-6
+  }
+  .label_input {
+    @apply text-form font-medium block mt-4;
+  }
+  .icon_style {
+    @apply justify-center absolute ml-2   w-7 h-7 text-center items-center justify-items-center;
+  }
+};
