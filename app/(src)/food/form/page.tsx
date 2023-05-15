@@ -20,11 +20,11 @@ enum GenderEnum {
 
 interface DonationData {
   Item_name: string;
-  duration: { hours: number; minutes: number; seconds?: 0 };
+  duration: { hours: number; minutes: number; seconds: 0 };
   Item_location: {
     logitude: number;
     latitude: number;
-    //countryData: CountryData;
+    countryData: CountryData;
   };
   time: any;
   donation: boolean;
